@@ -1,10 +1,11 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-pokemon-card',
   standalone: true,
-  imports: [ CommonModule ],
+  imports: [ CommonModule, RouterLink, RouterLinkActive, RouterOutlet ],
   templateUrl: './pokemon-card.component.html',
   styleUrl: './pokemon-card.component.css'
 })

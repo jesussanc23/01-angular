@@ -1,11 +1,13 @@
-<div class="card">
-    <div class="card-content">
-        <div class="card-title">
-            <p>Pokemon with id: {{id}}</p>
-        </div>
-        <div class="card-info">
-            <p>Name: {{name}}</p>
-            <span *ngIf="forms_switchable">Switchable form</span>
+<a [routerLink]="['/pokemon-info', id]" routerLinkActive="active" ariaCurrentWhenActive="page">
+    <div class="card">
+        <div class="card-content">
+            <div class="card-title">
+                <p>Pokemon with id: {{id}}</p>
+            </div>
+            <div class="card-info">
+                <p>Name: {{name}}</p>
+                <span *ngIf="forms_switchable">Switchable form</span>
+            </div>
         </div>
     </div>
-</div>
+</a>
