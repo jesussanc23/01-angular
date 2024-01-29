@@ -1,7 +1,7 @@
 <h1>Welcome to the pokemon app</h1>
 <i>Please login to the app</i>
 <form (ngSubmit)="login()" [formGroup]="loginForm">
-    <input type="text" name="username" id="username" required formControlName="username">
-    <input type="password" name="password" id="password" required formControlName="password">
+    <input type="text" name="username" id="username" required formControlName="username" placeholder="hello">
+    <input type="password" name="password" id="password" required formControlName="password" placeholder="world">
     <input type="submit" value="Login">
 </form>

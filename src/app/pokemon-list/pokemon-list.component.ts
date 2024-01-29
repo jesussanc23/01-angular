@@ -30,6 +30,7 @@ export class PokemonListComponent implements OnInit {
   }
 
   logout(){
+    console.log("click event worked");
     localStorage.removeItem('tokenAuth');
     this.router.navigate(['/']);
   }

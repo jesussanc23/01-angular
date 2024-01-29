@@ -2,8 +2,6 @@ import { Component } from '@angular/core';
 
 import { RouterOutlet } from '@angular/router';
 import { PokemonListComponent } from './pokemon-list/pokemon-list.component';
-import { requestInterceptorInterceptor } from './interceptors/request-interceptor.interceptor';
-import { HTTP_INTERCEPTORS } from '@angular/common/http';
 
 @Component({
     selector: 'app-root',
@@ -11,11 +9,7 @@ import { HTTP_INTERCEPTORS } from '@angular/common/http';
     templateUrl: './app.component.html',
     styleUrl: './app.component.css',
     imports: [ RouterOutlet, PokemonListComponent ],
-    providers: [{
-      provide: HTTP_INTERCEPTORS,
-      useValue: requestInterceptorInterceptor,
-      multi: true
-    }]
+    providers: []
 })
 export class AppComponent {
   title = '01-angular';  
