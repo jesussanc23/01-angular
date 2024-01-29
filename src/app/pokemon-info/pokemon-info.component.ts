@@ -27,7 +27,9 @@ export class PokemonInfoComponent implements OnInit {
     this._route.params.forEach((params: Params)=>{
       this.id = params['id'];
     });
-    this.pokemon = this._pokemonService.getPokemonById(this.id);
+    this._pokemonService.getPokemonDetails(this.id).subscribe((response:any)=>{
+      this.pokemon = response;
+    });
   }
 
 }

@@ -13,11 +13,12 @@ export class PokemonCardComponent implements OnInit {
   @Input() pokemon : any;
   name!: string;
   id!: Number;
+  url!: string;
   forms_switchable = true;
 
   ngOnInit(): void {
     this.name = this.pokemon.name;
-    this.id = this.pokemon.id;
-    this.forms_switchable = this.pokemon.forms_switchable;
+    this.id = this.pokemon.name;
+    this.url = this.pokemon.url;
   }
 }
