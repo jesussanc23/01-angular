@@ -1,0 +1,12 @@
+<div class="pokemon-info">
+    <div class="info" *ngIf="pokemon">
+        <p>ID: {{id}}</p>
+        <h2>Pokemon name: {{pokemon.name | uppercase }}</h2>
+        <p>Weight: {{ pokemon.weight | hectograms }}</p>
+        <p>Height: {{ pokemon.height | decimeters }} </p>
+    
+        <img src="{{ pokemon.sprite }}" alt="Pokemon picture">
+    </div>
+
+    <a [routerLink]="['/']" routerLinkActive="active" ariaCurrentWhenActive="page">Go back to list</a>
+</div>
