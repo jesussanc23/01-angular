@@ -1,7 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import JsonData from '../../assets/data.json';
-import { json } from 'stream/consumers';
 
 @Injectable({
   providedIn: 'root'
