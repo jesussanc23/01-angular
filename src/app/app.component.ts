@@ -8,7 +8,8 @@ import { PokemonListComponent } from './pokemon-list/pokemon-list.component';
     standalone: true,
     templateUrl: './app.component.html',
     styleUrl: './app.component.css',
-    imports: [ RouterOutlet, PokemonListComponent]
+    imports: [ RouterOutlet, PokemonListComponent ],
+    providers: []
 })
 export class AppComponent {
   title = '01-angular';  

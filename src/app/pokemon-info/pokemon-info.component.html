@@ -5,8 +5,8 @@
         <p>Weight: {{ pokemon.weight | hectograms }}</p>
         <p>Height: {{ pokemon.height | decimeters }} </p>
     
-        <img src="{{ pokemon.sprite }}" alt="Pokemon picture">
+        <img src="{{ pokemon.sprites.front_shiny }}" alt="Pokemon picture">
     </div>
 
-    <a [routerLink]="['/']" routerLinkActive="active" ariaCurrentWhenActive="page">Go back to list</a>
+    <a [routerLink]="['/pokemon-list']" routerLinkActive="active" ariaCurrentWhenActive="page">Go back to list</a>
 </div>
