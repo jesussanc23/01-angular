@@ -13,7 +13,7 @@ import { Router } from '@angular/router';
   styleUrl: './pokemon-list.component.css'
 })
 export class PokemonListComponent implements OnInit {
-  pokemons = DataJson;
+  pokemons: any;
 
   constructor(
     private pokemonsService: PokemonsService,
@@ -22,11 +22,14 @@ export class PokemonListComponent implements OnInit {
 
   ngOnInit(): void {
     //console.log(this.pokemons)
-    this.pokemons = this.pokemonsService.pokemonsList;
-    this.pokemonsService.getPokemonsList().subscribe((response: any)=>{
+    //this.pokemons = this.pokemonsService.pokemonsList;
+    /*this.pokemonsService.getPokemonsList().subscribe((response: any)=>{
       this.pokemons = response.results ?? [];
       
-    });
+    });*/
+    this.pokemonsService.loadPokemonos().subscribe((response)=>{
+      this.pokemons = response;
+    })
   }
 
   logout(){

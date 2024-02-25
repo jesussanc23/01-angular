@@ -8,5 +8,5 @@ import { UserGuard } from './authentication/UserGuard';
 import { requestInterceptorInterceptor } from './interceptors/request-interceptor.interceptor';
 
 export const appConfig: ApplicationConfig = {
-  providers: [provideRouter(routes), provideClientHydration(), provideHttpClient(withInterceptors([ requestInterceptorInterceptor ])), UserGuard]
+  providers: [provideRouter(routes), provideClientHydration(), provideHttpClient(withInterceptors([ requestInterceptorInterceptor ]), withFetch()), UserGuard]
 };
